@@ -36,6 +36,25 @@
             <div id="mp1" onclick="mp()">Multiplayer</div>
         </div>
     </div>
+    <div id="multiPage">
+        <div id="wordInput">
+            <div id="multiText">
+                <p>The phrase guesser should look away from the screen now.</p>
+                <p>Phrase creator, type your phrase and click submit!</p>
+            </div>
+            <div id="inputContainer">
+                <textarea id="input" cols="40" rows="5" onkeyup = "countChars('input','charcount');" onkeydown = "countChars('input','charcount');" onmouseout = "countChars('input','charcount');"></textarea>
+                <span id="restriction">Only special characters allowed: <span style="font-weight: 700;">? ! , . ' &ndash;</span></span>
+            </div>
+            <div id="characterCount">
+                <p id="charContain">
+                    <span id="charcount">0</span>/100 characters
+                </p>
+                <div id="submit" onclick="readText()">Submit</div>
+            </div>
+            <div id="sp1" onclick="sp()">Single player</div>
+        </div>
+    </div>
 <script src="index.js"></script>
 </body>
 </html>
