@@ -9,7 +9,17 @@
     <title>Hangman</title>
 </head>
 <body>
-
+    <div id="introPage">
+        <div id="introText">
+            <p>Welcome to online hangman!</p>
+            <p>Select single player or multiplayer to begin!</p>
+            <div id="buttonContainer">
+                <div id="sp" onclick="sp()">Single player</div>
+                <div id="mp" onclick="mp()">Multiplayer</div>
+            </div>
+        </div>
+        <canvas id="homeHangman" width="300px" height="300px"></canvas>
+    </div>
 <script src="index.js"></script>
 </body>
 </html>
