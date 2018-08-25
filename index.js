@@ -28,3 +28,11 @@ function phrase(){
     document.getElementById('categoryName').innerHTML = "Phrases";
     hangman();
 }
+
+function movie(){
+    rand = Math.floor(Math.random()*movies.length);
+    word = movies[rand];
+    document.getElementById('singlePage').style.display = "none";
+    document.getElementById('categoryName').innerHTML = "Movies and movie quotes";
+    hangman();
+}
