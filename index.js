@@ -351,6 +351,61 @@ function splitWords(){
                 countBack--;
             }
         }
+    }  
+}
+
+function guessLetter(){
+    var correct = 0;
+    var target = event.target || event.srcElement;
+    target.style.visibility = "hidden";
+    var lower = target.id;
+    var upper = document.getElementById(lower).getAttribute('value');
+    var results = document.getElementById('results');
+    var ul1 = document.getElementById('underline1').offsetWidth;
+    for(a = 1; a < 101; a++){
+        if(document.getElementById('letter'+a).innerHTML === upper || document.getElementById('letter'+a).innerHTML === lower){
+            document.getElementById('letter'+a).style.visibility = "visible";
+            correct++;
+            numRight++;
+        }
     }
-    
+    if(correct==0){
+        numWrong++;
+        hang();
+    }
+    if(numWrong==6){
+        results.style.visibility = "visible";
+        results.style.color = "red";
+        results.innerHTML = "You can't miss another letter!";
+        if(ul1 == 50){
+            results.style.lineHeight = "70px";
+            results.style.fontSize = "30px";
+        }
+        if(ul1 == 28){
+            results.style.lineHeight = "50px";
+            results.style.fontSize = "25px";
+        }
+        if(ul1 == 18){
+            results.style.lineHeight = "40px";
+            results.style.fontSize = "20px";
+        }
+    }
+    if(numWrong==7){
+        results.innerHTML = "You lose!<br>Keep guessing until you get it right.";
+        document.getElementById('again').style.display = "block";
+        document.getElementById('home').style.display = "block";
+        document.getElementById('vidSent').style.display = "block";
+        if(ul1 == 50){
+            results.style.lineHeight = "40px";
+        }
+        if(ul1 == 28){
+            results.style.lineHeight = "25px";
+        }
+        if(ul1 == 18){
+            results.style.lineHeight = "20px";
+        }
+    }
+    if(numRight==phraseLength){
+        win();
+    }
 }
