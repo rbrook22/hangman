@@ -359,6 +359,26 @@
                 <div id="letter100"></div>
             </div>
         </div>
+        <canvas id="hangman" width="300px" height="300px"></canvas>
+        <div id="results"></div>
+        <div id="letterBank">
+                <div id="a" value="A" onclick="guessLetter()">A</div><div id="b" value="B" onclick="guessLetter()">B</div><div id="c" value="C" onclick="guessLetter()">C</div><div id="d" value="D" onclick="guessLetter()">D</div><div id="e" value="E" onclick="guessLetter()">E</div><div id="f" value="F" onclick="guessLetter()">F</div><div id="g" value="G" onclick="guessLetter()">G</div><div id="h" value="H" onclick="guessLetter()">H</div><div id="i" value="I" onclick="guessLetter()">I</div><div id="j" value="J" onclick="guessLetter()">J</div><div id="k" value="K" onclick="guessLetter()">K</div><div id="l" value="L" onclick="guessLetter()">L</div><div id="m" value="M" onclick="guessLetter()">M</div><div id="n" value="N" onclick="guessLetter()">N</div><div id="o" value="O" onclick="guessLetter()">O</div><div id="p" value="P" onclick="guessLetter()">P</div><div id="q" value="Q" onclick="guessLetter()">Q</div><div id="r" value="R" onclick="guessLetter()">R</div><div id="s" value="S" onclick="guessLetter()">S</div><div id="t" value="T" onclick="guessLetter()">T</div><div id="u" value="U" onclick="guessLetter()">U</div><div id="v" value="V" onclick="guessLetter()">V</div><div id="w" value="W" onclick="guessLetter()">W</div><div id="x" value="X" onclick="guessLetter()">X</div><div id="y" value="Y" onclick="guessLetter()">Y</div><div id="z" value="Z" onclick="guessLetter()">Z</div>
+        </div>
+        <div id="challengeBank">
+                <div id="a" value="A" onclick="challengeGuess()">A</div><div id="b" value="B" onclick="challengeGuess()">B</div><div id="c" value="C" onclick="challengeGuess()">C</div><div id="d" value="D" onclick="challengeGuess()">D</div><div id="e" value="E" onclick="challengeGuess()">E</div><div id="f" value="F" onclick="challengeGuess()">F</div><div id="g" value="G" onclick="challengeGuess()">G</div><div id="h" value="H" onclick="challengeGuess()">H</div><div id="i" value="I" onclick="challengeGuess()">I</div><div id="j" value="J" onclick="challengeGuess()">J</div><div id="k" value="K" onclick="challengeGuess()">K</div><div id="l" value="L" onclick="challengeGuess()">L</div><div id="m" value="M" onclick="challengeGuess()">M</div><div id="n" value="N" onclick="challengeGuess()">N</div><div id="o" value="O" onclick="challengeGuess()">O</div><div id="p" value="P" onclick="challengeGuess()">P</div><div id="q" value="Q" onclick="challengeGuess()">Q</div><div id="r" value="R" onclick="challengeGuess()">R</div><div id="s" value="S" onclick="challengeGuess()">S</div><div id="t" value="T" onclick="challengeGuess()">T</div><div id="u" value="U" onclick="challengeGuess()">U</div><div id="v" value="V" onclick="challengeGuess()">V</div><div id="w" value="W" onclick="challengeGuess()">W</div><div id="x" value="X" onclick="challengeGuess()">X</div><div id="y" value="Y" onclick="challengeGuess()">Y</div><div id="z" value="Z" onclick="challengeGuess()">Z</div>
+        </div>
+        <div id="again" onClick="reset()">Play again!</div>
+        <div id="home" onClick="window.location.reload()">Main menu</div>
+        <p id="vidSent">Click <span id="vidLink" onClick="video()">here</span> to watch and learn how this website functions.</p>
+    </div>
+    <div id="videoPage">
+        <p id="vidHead">How this website works</p>
+        <iframe id ="video" width="800" height="450" src="https://www.youtube.com/embed/ZtNyfGyS00M" frameborder="0" allowfullscreen></iframe>
+        <iframe id ="videoTab" width="500" height="280" src="https://www.youtube.com/embed/ZtNyfGyS00M" frameborder="0" allowfullscreen></iframe>
+        <iframe id ="videoMob" width="300" height="170" src="https://www.youtube.com/embed/ZtNyfGyS00M" frameborder="0" allowfullscreen></iframe>
+        <p id="vidCaption"><i>Click <a href="https://youtu.be/ZtNyfGyS00M" target="_blank">here</a> to view this video in a separate tab.</i></p>
+        <div id="home1" onClick="window.location.reload()">Main menu</div>
+    </div>
 <script src="index.js"></script>
 </body>
 </html>
