@@ -924,3 +924,66 @@ function hang(){
             ctx.stroke();
     }
 }
+
+function reset(){
+    var ul1 = document.getElementById('underline1').offsetWidth;
+    var results = document.getElementById('results');
+    var again = document.getElementById('again');
+    for(a = 1; a < 101; a++){
+        document.getElementById('letter'+a).innerHTML = "&nbsp;";
+        document.getElementById('underline'+a).style.width = ul1 + "px";
+        if(ul1 == 50){
+            document.getElementById('underline'+a).style.marginRight = "5px";
+            results.style.height = "70px";
+        }
+        else if(ul1 == 28){
+            document.getElementById('underline'+a).style.marginRight = "3px";
+            results.style.height = "50px";
+        }
+        else{
+            document.getElementById('underline'+a).style.marginRight = "3px";
+            results.style.height = "40px";
+        }
+        document.getElementById('underline'+a).style.display = "none";
+        document.getElementById('underline'+a).style.borderBottom = "0px";
+    }
+    var bank = document.getElementById("letterBank").querySelectorAll("div");
+    var cBank = document.getElementById("challengeBank").querySelectorAll("div");
+    for(b = 0; b < 26; b++){
+        bank[b].style.visibility = "visible";
+        cBank[b].style.visibility = "visible";
+    }
+    numWrong = 0;
+    numRight = 0;
+    phraseLength = 0;
+    numChar = 0;
+    results.style.marginTop = "5px";
+    results.style.lineHeight = "40px";
+    results.innerHTML = " ";
+    document.getElementById('vidSent').style.display = "none";
+    document.getElementById('letterBank').style.display = "block";
+    again.style.marginTop = "0px";
+    again.style.display = "none";
+    document.getElementById('home').style.display = "none";
+    if(phrases.indexOf(word) > -1){
+        phrases.splice(rand,1);
+        phrase();
+    }
+    else if(movies.indexOf(word) > -1){
+        movies.splice(rand,1);
+        movie();
+    }
+    else if(songs.indexOf(word) > -1){
+        songs.splice(rand,1);
+        song();
+    }
+    else if(document.getElementById('charcount').innerHTML > 0){
+        document.getElementById('gamePage').style.display = "none";
+        document.getElementById('input').value = "";
+        document.getElementById('charcount').innerHTML = "0";
+        document.getElementById('multiPage').style.display = "block";
+    }
+    else{
+        challenge();
+    }
+}
