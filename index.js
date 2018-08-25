@@ -987,3 +987,9 @@ function reset(){
         challenge();
     }
 }
+
+function video(){
+    document.getElementById('gamePage').style.display = "none";
+    document.getElementById('videoPage').style.display = "block";
+    document.getElementById('home1').style.display = "block";
+}
