@@ -72,3 +72,72 @@ function challenge(){
     phraseLength = 1;
     draw();
 }
+
+function challengeGuess(){
+    var target = event.target || event.srcElement;
+    target.style.visibility = "hidden";
+    var lower = target.id;
+    var upper = document.getElementById(lower).getAttribute('value');
+    var results = document.getElementById('results');
+    if(document.getElementById('letter1').innerHTML === upper){
+        document.getElementById('letter1').style.visibility = "visible";
+        numRight++;
+    }
+    if(numRight==0){
+        numWrong++;
+        hang();
+    }
+    if(numRight==1){
+        results.style.visibility = "visible";
+        results.style.color = "red";
+        results.innerHTML = "You lose!";        
+        if(document.getElementById('underline1').offsetWidth == 50){
+            results.style.fontSize = "200px";
+            results.style.height = "200px";
+            results.style.lineHeight = "200px";
+        }
+        if(document.getElementById('underline1').offsetWidth == 28){
+            results.style.marginTop = "20px";
+            results.style.fontSize = "100px";
+            results.style.height = "100px";
+            results.style.lineHeight = "100px";
+        }
+        if(document.getElementById('underline1').offsetWidth == 18){
+            results.style.marginTop = "15px";
+            results.style.fontSize = "75px";
+            results.style.height = "75px";
+            results.style.lineHeight = "75px";
+        }
+        document.getElementById('challengeBank').style.display = "none";
+        document.getElementById('vidSent').style.display = "block";
+        document.getElementById('again').style.display = "block";
+        document.getElementById('home').style.display = "block";
+    }
+    if(numWrong==25){
+        results.style.visibility = "visible";
+        results.style.color = "#00b100";
+        results.innerHTML = "You win!";        
+        if(document.getElementById('underline1').offsetWidth == 50){
+            results.style.fontSize = "200px";
+            results.style.height = "200px";
+            results.style.lineHeight = "200px";
+        }
+        if(document.getElementById('underline1').offsetWidth == 28){
+            results.style.marginTop = "20px";
+            results.style.fontSize = "100px";
+            results.style.height = "100px";
+            results.style.lineHeight = "100px";
+        }
+        if(document.getElementById('underline1').offsetWidth == 18){
+            results.style.marginTop = "15px";
+            results.style.fontSize = "75px";
+            results.style.height = "75px";
+            results.style.lineHeight = "75px";
+        }
+        document.getElementById('challengeBank').style.display = "none";
+        document.getElementById('vidSent').style.display = "block";
+        document.getElementById('again').style.display = "block";
+        document.getElementById('home').style.display = "block";
+        document.getElementById('letter1').style.visibility = "visible";
+    }
+}
