@@ -36,3 +36,11 @@ function movie(){
     document.getElementById('categoryName').innerHTML = "Movies and movie quotes";
     hangman();
 }
+
+function song(){
+    rand = Math.floor(Math.random()*songs.length);
+    word = songs[rand];
+    document.getElementById('singlePage').style.display = "none";
+    document.getElementById('categoryName').innerHTML = "Song titles and lyrics";
+    hangman();
+}
