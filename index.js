@@ -44,3 +44,31 @@ function song(){
     document.getElementById('categoryName').innerHTML = "Song titles and lyrics";
     hangman();
 }
+
+function challenge(){
+    rand = Math.floor(Math.random()*challenges.length);
+    word = challenges[rand];
+    numChar = 1;
+    var letter = word.substring(0,1);
+        document.getElementById('letter1').innerHTML = letter;
+        document.getElementById('letter1').style.visibility = "hidden";
+        document.getElementById('underline1').style.display = "block";            
+        document.getElementById('underline1').style.borderBottom = "3px solid black";
+    document.getElementById('singlePage').style.display = "none";    
+    document.getElementById('gamePage').style.display = "block";
+    document.getElementById('categoryName').innerHTML = "Guess every letter other than the correct one to win!";
+    document.getElementById('categoryName').style.width = "100%";
+    if(document.getElementById('underline1').offsetWidth == 50){
+        document.getElementById('categoryName').style.fontSize = "45px";
+    }
+    if(document.getElementById('underline1').offsetWidth == 28){
+        document.getElementById('categoryName').style.fontSize = "30px";
+    }
+    if(document.getElementById('underline1').offsetWidth == 18){
+        document.getElementById('categoryName').style.fontSize = "20px";
+    }
+    document.getElementById('letterBank').style.display = "none";
+    document.getElementById('challengeBank').style.display = "block";
+    phraseLength = 1;
+    draw();
+}
