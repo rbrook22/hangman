@@ -254,6 +254,7 @@ function guessLetter(){
     }
     if(correct==0){
         numWrong++;
+        document.getElementById('incorrect').innerHTML = numWrong;
         hang();
     }
     if(numWrong==5){
