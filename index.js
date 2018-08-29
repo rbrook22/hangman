@@ -836,6 +836,7 @@ function reset(){
         bank[b].style.visibility = "visible";
     }
     numWrong = 0;
+    document.getElementById("incorrect").innerHTML = 0;
     numRight = 0;
     phraseLength = 0;
     numChar = 0;
