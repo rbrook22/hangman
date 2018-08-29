@@ -4,7 +4,6 @@ var numWrong = 0;
 var numRight = 0;
 var phraseLength = 0;
 var numChar = 0;
-var phrases = ["Early bird gets the worm", "Read between the lines", "I can eat a horse", "Twenty-four seven", "Cat got your tounge", "One in one million", "I beg to differ", "Easier said than done", "Add insult to injury", "Don't cry over spilled milk", "Curiosity killed the cat", "Two peas in a pod", "That's the last straw", "Piece of cake", "Speak of the devil", "Go the whole nine yards", "An eye for an eye", "Hit the hay", "Stab someone in the back", "Quit cold turkey", "Cut to the chase", "Best of both worlds", "Kill two birds with one stone", "Break a leg", "Hit the nail on the head", "Kick the bucket"];
 
 function sp(){
     document.getElementById('introPage').style.display = "none";
@@ -19,8 +18,8 @@ function mp(){
 }
 
 function phrase(){
-    rand = Math.floor(Math.random()*phrases.length);
-    word = phrases[rand];
+    rand = Math.floor(Math.random()*wordList.length);
+    word = wordList[rand];
     document.getElementById('singlePage').style.display = "none";
     document.getElementById('categoryName').innerHTML = "Phrases";
     hangman();
@@ -832,10 +831,8 @@ function reset(){
         document.getElementById('underline'+a).style.borderBottom = "0px";
     }
     var bank = document.getElementById("letterBank").querySelectorAll("div");
-    var cBank = document.getElementById("challengeBank").querySelectorAll("div");
     for(b = 0; b < 26; b++){
         bank[b].style.visibility = "visible";
-        cBank[b].style.visibility = "visible";
     }
     numWrong = 0;
     numRight = 0;
@@ -844,22 +841,14 @@ function reset(){
     results.style.marginTop = "5px";
     results.style.lineHeight = "40px";
     results.innerHTML = " ";
-    document.getElementById('vidSent').style.display = "none";
     document.getElementById('letterBank').style.display = "block";
     again.style.marginTop = "0px";
     again.style.display = "none";
     document.getElementById('home').style.display = "none";
-    if(phrases.indexOf(word) > -1){
-        phrases.splice(rand,1);
+    draw();
+    if(wordList.indexOf(word) > -1){
+        wordList.splice(rand,1);
         phrase();
-    }
-    else if(movies.indexOf(word) > -1){
-        movies.splice(rand,1);
-        movie();
-    }
-    else if(songs.indexOf(word) > -1){
-        songs.splice(rand,1);
-        song();
     }
     else if(document.getElementById('charcount').innerHTML > 0){
         document.getElementById('gamePage').style.display = "none";
@@ -870,10 +859,4 @@ function reset(){
     else{
         challenge();
     }
-}
-
-function video(){
-    document.getElementById('gamePage').style.display = "none";
-    document.getElementById('videoPage').style.display = "block";
-    document.getElementById('home1').style.display = "block";
 }
