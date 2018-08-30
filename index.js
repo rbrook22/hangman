@@ -255,7 +255,6 @@ function guessLetter(){
     }
     if(correct==0){
         numWrong++;
-        // var guessCount = 6
         document.getElementById('incorrect').innerHTML = numWrong;
         for(z = 6; z >= 0; z--){
             document.getElementById("remaining").innerHTML = z;
