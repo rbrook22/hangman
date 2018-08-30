@@ -128,27 +128,6 @@ body, html, #category, #category1, #category2, #phrases, #movies, #songs, #chall
         background: -moz-linear-gradient(left, #000081, white);
         background: linear-gradient(to right, #000081, white);
     }
-    #movies{
-        background: #147b14;
-        background: -webkit-linear-gradient(left, white, #147b14);
-        background: -o-linear-gradient(right, white, #147b14);
-        background: -moz-linear-gradient(right, white, #147b14);
-        background: linear-gradient(to right, white, #147b14);
-    }
-    #songs{
-        background: #bc7a00;
-        background: -webkit-linear-gradient(left, #bc7a00, white);
-        background: -o-linear-gradient(left, #bc7a00, white);
-        background: -moz-linear-gradient(left, #bc7a00, white);
-        background: linear-gradient(to right, #bc7a00, white);
-    }
-    #challenge{
-        background: #b10000;
-        background: -webkit-linear-gradient(left, white, #b10000);
-        background: -o-linear-gradient(right, white, #b10000);
-        background: -moz-linear-gradient(right, white, #b10000);
-        background: linear-gradient(to right, white, #b10000);
-    }
 #multiPage{
     display: none;
     height: 490px;
@@ -291,33 +270,10 @@ body, html, #category, #category1, #category2, #phrases, #movies, #songs, #chall
 #challengeGame{
     text-align: center;
 }
-#videoPage{
-    display: none;
-    height: 690px;
-    width: 845px;
-}
-    #vidHead, #vidCaption{
-        margin: 20px auto 10px auto;
-        font-size: 60px;
+    table {
+        border-collapse: collapse;
+        width: 100%;
         text-align: center;
-    }
-    #vidCaption{
-        margin-top: 10px;
-        font-size: 25px;
-    }
-    #video, #videoTab, #videoMob{
-        display: block;
-        margin: 0 auto;
-    }
-    #videoTab, #videoMob{
-        display: none;
-    }
-    #vidLink{
-        color: #b10000;
-    }
-    #vidLink:hover{
-        text-decoration: underline;
-        cursor: pointer;
     }
 
 @media (max-width: 866px){
@@ -474,32 +430,9 @@ body, html, #category, #category1, #category2, #phrases, #movies, #songs, #chall
         #home{
             margin-top: 0px;
         }
-        #vidSent{
-            margin-bottom: 50px;
-            font-size: 25px;
-        }
     #challengeGame{
         text-align: center;
     }
-    #videoPage{
-        display: none;
-        height: 450px;
-    }
-        #vidHead, #vidCaption{
-            margin: 0 auto 10px auto;
-            font-size: 30px;
-            text-align: center;
-        }
-        #vidCaption{
-            margin-top: 10px;
-            font-size: 15px;
-        }
-        #video, #videoTab, #videoMob{
-            display: block;
-        }
-        #video, #videoMob{
-            display: none;
-        }
 }
 
 @media (max-width: 500px){
@@ -623,29 +556,6 @@ body, html, #category, #category1, #category2, #phrases, #movies, #songs, #chall
             margin: 10px auto;
             font-size: 26px;
             line-height: 45px;
-        }
-        #vidSent{
-            margin-bottom: 30px;
-            font-size: 16px;
-        }
-    #videoPage{
-        display: none;
-        height: 320px;
-    }
-        #vidHead, #vidCaption{
-            margin: 0 auto 10px auto;
-            font-size: 30px;
-            text-align: center;
-        }
-        #vidCaption{
-            margin-top: 10px;
-            font-size: 13px;
-        }
-        #video, #videoTab, #videoMob{
-            display: block;
-        }
-        #video, #videoTab{
-            display: none;
         }
 }
 
