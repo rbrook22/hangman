@@ -250,11 +250,16 @@ function guessLetter(){
             document.getElementById('letter'+a).style.visibility = "visible";
             correct++;
             numRight++;
+            document.getElementById("correct").innerHTML = numRight;
         }
     }
     if(correct==0){
         numWrong++;
+        // var guessCount = 6
         document.getElementById('incorrect').innerHTML = numWrong;
+        for(z = 6; z >= 0; z--){
+            document.getElementById("remaining").innerHTML = z;
+        }
         hang();
     }
     if(numWrong==5){
@@ -838,6 +843,7 @@ function reset(){
     numWrong = 0;
     document.getElementById("incorrect").innerHTML = 0;
     numRight = 0;
+    document.getElementById("correct").innerHTML = 0;
     phraseLength = 0;
     numChar = 0;
     results.style.marginTop = "5px";
