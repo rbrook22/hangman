@@ -24,7 +24,7 @@
 ## Minimum Viable Product
 <p>User story: User lands on the home page and gives them the option to select single or multiplayer option. From there the computer generates a word randomly and you guess until you win or lose! May the odds be in your favor!
 
-## User Flot
+## User Flow
 ### Home Page
 
 <img src="/readme/home.png">
@@ -41,6 +41,7 @@
 ## Phase 2 Features
 * Add Leaderboard to track scores
 * Add Difficulty Levels
+* Add additional options like phrases, movie quotes, songs, etc. 
 
 
 
