@@ -275,6 +275,9 @@ body, html, #category, #category1, #category2, #phrases, #movies, #songs, #chall
         width: 100%;
         text-align: center;
     }
+    table th {
+        padding: 5px;
+    }
 
 @media (max-width: 866px){
     #introPage, #singlePage, #multiPage, #videoPage{
