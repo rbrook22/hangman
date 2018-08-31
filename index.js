@@ -1,6 +1,7 @@
 var rand = 0;
 var word = "";
 var numWrong = 0;
+var guessCount = 6;
 var numRight = 0;
 var phraseLength = 0;
 var numChar = 0;
@@ -23,7 +24,7 @@ function phrase(){
     word = wordList[rand];
     document.getElementById('singlePage').style.display = "none";
     document.getElementById('guessTable').style.display = "block";
-    document.getElementById('categoryName').innerHTML = "Phrases";
+    document.getElementById('categoryName').innerHTML = "Words";
     hangman();
 }
 
@@ -257,6 +258,8 @@ function guessLetter(){
     if(correct==0){
         numWrong++;
         document.getElementById('incorrect').innerHTML = numWrong;
+        guessCount--;
+        document.getElementById('remaining').innerHTML = guessCount;
         hang();  
     }
     if(numWrong==5){
@@ -839,6 +842,8 @@ function reset(){
     }
     numWrong = 0;
     document.getElementById("incorrect").innerHTML = 0;
+    guessCount = 6;
+    document.getElementById('remaining').innerHTML = 6;
     numRight = 0;
     phraseLength = 0;
     numChar = 0;
